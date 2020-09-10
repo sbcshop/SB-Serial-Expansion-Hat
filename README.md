@@ -31,7 +31,9 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 
 * Install Python Libraries
 ```sudo apt-get install python-dev ```
+
 ```sudo apt-get install python-smbus ```
+
 ```sudo apt-get install python-spidev ```
 
 #### Enable i2c Interface
