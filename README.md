@@ -1,13 +1,13 @@
 # SB-Serial-Expansion-Hat
 A Serial Expansion HAT with i2c Interface, Provides 2-channel UART (ttySC0 and ttySC1) along with 8 GPIOs.
 
-##Features :
+## Features :
 * Compatible with Raspberry Pi Zero/Zero W/Zero WH/2B/3B/3B+/4B
 * Onboard SC16IS752, expands 2-channel UART and 8 programmable GPIO through I2C
 * It is stackable up to 16 modules by setting the address jumper A0 and A1, that means up to 32-channel UART
 * Onboard Leds to indicate UART working status 
 
-##Specifications : 
+## Specifications : 
 * Operating voltage: 3.3V
 * Expansion chip: SC16IS752
 * Control interface: I2C
@@ -41,11 +41,14 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 ![GitHub Logo](/images/i2c_enable1.png)
 ![GitHub Logo](/images/i2c_enable2.png)
 3.Append this line to end of /boot/config.txt file: sudo nano /boot/config.txt
-```dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
+```
+dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
 # addr is different according to status of A0/A1, default 0X48
 ```
 4. Reboot
-``` sudo reboot ```
+```
+sudo reboot
+```
 5. After rebooting, you can execute command: ls /dev/ to check if SC16IS752 has been enabled to kernel.
 ![GitHub Logo](/images/ls_dev.png)
 
@@ -55,7 +58,9 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
  2. open examples folder and edit UART interface on code as per your need (ttySC0 or ttySC1).
  
  3. Now type below command to run it.
- ``` sudo python3 send.py ```
+ ```
+ sudo python3 send.py
+ ```
 
 
 
