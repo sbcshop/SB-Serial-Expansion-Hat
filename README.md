@@ -30,6 +30,7 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 #### Libraries Installation
 
 * Install Python Libraries
+
 ```sudo apt-get install python-dev ```
 
 ```sudo apt-get install python-smbus ```
@@ -39,10 +40,15 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 #### Enable i2c Interface
 
 1. Execute command: sudo raspi-config
+
 2. Choose: Interfacing Options->I2C->Yes
+
 ![GitHub Logo](/images/i2c_enable1.png)
 ![GitHub Logo](/images/i2c_enable2.png)
-3.Append this line to end of /boot/config.txt file: sudo nano /boot/config.txt
+
+3.Append this line to end of /boot/config.txt file:
+
+sudo nano /boot/config.txt
 ```
 dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
 # addr is different according to status of A0/A1, default 0X48
@@ -52,6 +58,7 @@ dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
 sudo reboot
 ```
 5. After rebooting, you can execute command: ls /dev/ to check if SC16IS752 has been enabled to kernel.
+
 ![GitHub Logo](/images/ls_dev.png)
 
 ### How to run examples
