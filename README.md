@@ -48,9 +48,12 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 
 ![GitHub Logo](/images/i2c_enable2.PNG)
 
-3. Append this line to end of /boot/config.txt file:
-
+3. Append this line to end of /boot/config.txt file, execute command:
+```
 sudo nano /boot/config.txt
+```
+and paste this line
+
 ```
 dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
 # addr is different according to status of A0/A1, default 0X48
@@ -70,13 +73,20 @@ sudo i2cdetect -y 1
 
 ### How to run examples
  1. Clone this git repository by executing command 
- ```    ```
+ 
+ ```
+ git clone https://github.com/sbcshop/SB-Serial-Expansion-Hat.git
+ ```
  2. open examples folder and edit UART interface on code as per your need (ttySC0 or ttySC1).
  
  3. Now type below command to run it.
  ```
  sudo python3 send.py
  ```
+ OR
+ ```
+  sudo python3 receive.py
+  ```
 
 
 
