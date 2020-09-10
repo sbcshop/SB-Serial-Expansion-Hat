@@ -23,6 +23,7 @@ or by soldering 0 ohm resistor to them according to this table:
 The I2C address in table are 8bits, however, the actual address is 7bits, you need to right-shift one bit to get the actual I2C address.
 For example, if you connect A1 and A0 to Vdd, the address of module is 0x90 according to the table, to get the actual address
 right-shift the data from 1001 000X to 100 1000, that is 0x48.
+
 【Note】This module A0 and A1 are default welded to 3.3V, with I2C address 0x48
 
 ### How to Configure ?
@@ -44,6 +45,7 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 2. Choose: Interfacing Options->I2C->Yes
 
 ![GitHub Logo](/images/i2c_enable1.png)
+
 ![GitHub Logo](/images/i2c_enable2.png)
 
 3.Append this line to end of /boot/config.txt file:
@@ -58,6 +60,12 @@ dtoverlay=sc16is752-i2c,int_pin=24,addr=0x48
 sudo reboot
 ```
 5. After rebooting, you can execute command: ls /dev/ to check if SC16IS752 has been enabled to kernel.
+
+6. You can also execute below command to find out connected i2c device address :
+```
+sudo i2cdetect -y 1
+```
+
 
 ![GitHub Logo](/images/ls_dev.png)
 
