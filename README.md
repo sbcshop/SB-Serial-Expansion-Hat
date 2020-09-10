@@ -1,7 +1,7 @@
 # SB-Serial-Expansion-Hat
 A Serial Expansion HAT with i2c Interface, Provides 2-channel UART (ttySC0 and ttySC1) along with 8 GPIOs.
 
-<img src="/images/product_pic.png" height="300" width="400")
+<img src="/images/product_pic.png" height="300" width="400" />
 
 ## Features :
 * Compatible with Raspberry Pi Zero/Zero W/Zero WH/2B/3B/3B+/4B
