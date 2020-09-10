@@ -18,7 +18,7 @@ A Serial Expansion HAT with i2c Interface, Provides 2-channel UART (ttySC0 and t
 I2C device address can be configured by changing status of A0 and A1, that is by soldering
 or by soldering 0 ohm resistor to them according to this table:
 
-![GitHub Logo](/images/i2c_address_setting.png)
+![GitHub Logo](/images/i2c_address_setting.PNG)
 
 The I2C address in table are 8bits, however, the actual address is 7bits, you need to right-shift one bit to get the actual I2C address.
 For example, if you connect A1 and A0 to Vdd, the address of module is 0x90 according to the table, to get the actual address
@@ -44,9 +44,9 @@ right-shift the data from 1001 000X to 100 1000, that is 0x48.
 
 2. Choose: Interfacing Options->I2C->Yes
 
-![GitHub Logo](/images/i2c_enable1.png)
+![GitHub Logo](/images/i2c_enable1.PNG)
 
-![GitHub Logo](/images/i2c_enable2.png)
+![GitHub Logo](/images/i2c_enable2.PNG)
 
 3. Append this line to end of /boot/config.txt file:
 
