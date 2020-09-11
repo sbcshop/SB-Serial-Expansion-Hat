@@ -91,7 +91,14 @@ sudo i2cdetect -y 1
   ```
 ### Video Tutorial
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/0jq11UZN-bg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<div align="center">
+      <a href="https://www.youtube.com/watch?v=0jq11UZN-bg">
+     <img 
+      src="https://img.youtube.com/vi/0jq11UZN-bg/0.jpg" 
+      alt="SB Serial Expansion HAT for Raspberry Pi" 
+      style="width:100%;">
+      </a>
+    </div>
 
 
 
