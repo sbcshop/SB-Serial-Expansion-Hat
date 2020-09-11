@@ -1,5 +1,6 @@
 # SB-Serial-Expansion-Hat
 A Serial Expansion HAT with i2c Interface, Provides 2-channel UART (ttySC0 and ttySC1) along with 8 GPIOs.
+
 Buy it from : https://shop.sb-components.co.uk/products/serial-expansion-hat-for-raspberry-pi
 
 <img src="/images/product_pic.png" height="200" width="300" /><img src="/images/product_pic2.png" height="200" width="300" />
